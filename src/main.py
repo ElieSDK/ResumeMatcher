@@ -10,7 +10,7 @@ import logging
 import pdfplumber
 import docx
 
-# LangChain / OpenAI (consolidated imports)
+# LangChain / OpenAI
 from langchain.schema import Document
 from langchain_community.vectorstores import FAISS
 from langchain.prompts import ChatPromptTemplate
@@ -32,7 +32,7 @@ try:
 except ImportError:
     STREAMLIT_AVAILABLE = False
 
-# --- Configuration & Initialization ---
+# Configuration & Initialization
 load_dotenv(os.path.expanduser("/home/es/Desktop/code/.env")) # Load API key
 
 MATCHING_PROMPT_TEMPLATE = """
@@ -58,8 +58,7 @@ Retrieved Context (from similar documents):
 {context}
 """
 
-# --- File Handling and Text Extraction ---
-
+# File Handling and Text Extraction
 def extract_and_clean(path: str) -> str:
     """Extracts text content from PDF, DOCX, or plain text files and cleans it."""
     p = pathlib.Path(path)
@@ -82,8 +81,7 @@ def extract_and_clean(path: str) -> str:
     # Clean the extracted text: remove empty lines and strip whitespace
     return "\n".join(line.strip() for line in text.splitlines() if line.strip())
 
-# --- LangChain Core Components ---
-
+# LangChain Core Components
 def get_embeddings() -> OpenAIEmbeddings:
     """Initializes and returns the OpenAI Embeddings model."""
     print("[Info] Initializing OpenAI embeddings...")
@@ -157,8 +155,7 @@ def match(resume_path: str, jd_path: str, index_dir: str, k: int = 5) -> dict:
     except Exception as e:
         return {"error": f"LLM Chain execution failed: {e}"}
 
-# --- Streamlit Application ---
-
+# Streamlit Application
 def run_ui(index_dir: str):
     """Initializes and runs the Streamlit web interface."""
     if not STREAMLIT_AVAILABLE:
@@ -203,8 +200,7 @@ def run_ui(index_dir: str):
                 if os.path.exists(path):
                     os.unlink(path)
 
-# --- Main Execution ---
-
+# Main Execution
 def main():
     """Main function to handle command-line arguments."""
     parser = argparse.ArgumentParser(description="A RAG-based tool for matching resumes to job descriptions.")
