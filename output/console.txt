@@ -1,0 +1,18 @@
+python main.py --action match --resume ./data/resumes/example.pdf --jd ./data/jds/example_jd.pdf --index-dir ./index
+
+[Info] Initializing OpenAI embeddings...
+{
+  "score": 65,
+  "explanation": [
+    "The candidate has a Master's degree in Information and Data Science, which aligns well with the job requirements for an AI/LLM Engineer.",
+    "The candidate has experience in data analysis, experiments, and data science, which are relevant to the role.",
+    "Proficient in programming languages like Python and R, which are essential for the position.",
+    "Experience with big data tools like Hadoop and AWS, which are mentioned in the job description.",
+    "Experience with machine learning models and data visualization, which are key aspects of the job.",
+    "While the candidate lacks specific experience with Azure and GCP, their overall skill set and experience make them a strong candidate for the role.",
+    "The candidate's background in statistics and computational information processing is beneficial for the AI/LLM Engineer position.",
+    "The candidate's projects demonstrate a strong understanding of machine learning and data analysis, which are required for the role.",
+    "The candidate's experience in field experiments and data mining aligns with the responsibilities of the AI/LLM Engineer role.",
+    "Overall, the candidate shows a good match with the job description, but could benefit from more experience with cloud services like Azure and GCP."
+  ]
+}
