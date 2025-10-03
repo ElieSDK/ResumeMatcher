@@ -204,7 +204,10 @@ def run_ui(index_dir: str):
 def main():
     """Main function to handle command-line arguments."""
     parser = argparse.ArgumentParser(description="A RAG-based tool for matching resumes to job descriptions.")
-    parser.add_argument("--action", choices=["index", "match", "serve"], required=True)
+    
+    # MODIFIED LINE: Remove 'required=True' and set 'default="serve"'
+    parser.add_argument("--action", choices=["index", "match", "serve"], default="serve") 
+    
     parser.add_argument("--data-dir", default="./data")
     parser.add_argument("--index-dir", default="./index")
     parser.add_argument("--resume")
