@@ -3,7 +3,7 @@
 
 ## **Project Overview**
 
-**Job Matcher (RAG-Enabled)** is an AI-powered tool for **matching resumes to job descriptions**. It uses a **Retrieval-Augmented Generation (RAG) pipeline**:
+**ResumeMatcher (RAG-Enabled)** is an AI-powered tool for **matching resumes to job descriptions**. It uses a **Retrieval-Augmented Generation (RAG) pipeline**:
 
 1. Text from resumes and job descriptions is **extracted and cleaned** from PDF, DOCX, or TXT files.
 2. Text is **converted into embeddings** using OpenAI’s embedding model.
