@@ -12,7 +12,7 @@ import docx
 
 # LangChain / OpenAI
 from langchain.schema import Document
-from langchain_community.vectorstores import FAISS
+from langchain.vectorstores import FAISS
 from langchain.prompts import ChatPromptTemplate
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 from langchain_core.runnables import RunnablePassthrough
