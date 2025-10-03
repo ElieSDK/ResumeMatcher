@@ -33,7 +33,8 @@ except ImportError:
     STREAMLIT_AVAILABLE = False
 
 # Configuration & Initialization
-load_dotenv(os.path.expanduser("/home/es/Desktop/code/.env")) # Load API key
+#load_dotenv(os.path.expanduser("/home/es/Desktop/code/.env")) # Load API key
+openai_api_key = st.secrets["OPENAI_API_KEY"] 
 
 MATCHING_PROMPT_TEMPLATE = """
 You are an expert recruiter. Your task is to compare a candidate's resume against a job description.
