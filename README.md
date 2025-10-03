@@ -4,21 +4,21 @@
 
 ```
 .
-├── data
-│   ├── jds/                # Job description files (PDF, DOCX, TXT)
-│   └── resumes/            # Candidate resumes (PDF, DOCX, TXT)
-├── index                   # FAISS index files
-│   ├── index.faiss
-│   ├── index.pkl
-│   ├── index_store.faiss
-│   └── index_store.pkl
-├── output
-│   └── console.txt         # Example output from model
-├── src
-│   └── main.py             # Main script
-├── LICENSE
-├── README.md
-└── requirements.txt
++-- data
+|   +-- jds/                # Job description files (PDF, DOCX, TXT)
+|   +-- resumes/            # Candidate resumes (PDF, DOCX, TXT)
++-- index                   # FAISS index files
+|   +-- index.faiss
+|   +-- index.pkl
+|   +-- index_store.faiss
+|   +-- index_store.pkl
++-- output
+|   +-- console.txt         # Example output from model
++-- src
+|   +-- main.py             # Main script
++-- LICENSE
++-- README.md
++-- requirements.txt
 ```
 
 ---
