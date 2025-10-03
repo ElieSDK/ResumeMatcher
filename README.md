@@ -42,25 +42,13 @@
 
 ## **Pipeline Diagram**
 
-Resume + Job Description
-           |
-           v
-Text Extraction & Cleaning
-           |
-           v
-Convert to Embeddings
-           |
-           v
-FAISS Index / Retriever
-           |
-           v
-Prompt Template + Context
-           |
-           v
-LLM (GPT-3.5)
-           |
-           v
-Output: Score + Explanation
+flowchart TD
+    A[Resume + Job Description] --> B[Text Extraction & Cleaning]
+    B --> C[Convert to Embeddings]
+    C --> D[FAISS Index / Retriever]
+    D --> E[Prompt Template + Context]
+    E --> F[LLM (GPT-3.5)]
+    F --> G[Output: Score + Explanation]
 
 ---
 
