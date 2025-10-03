@@ -3,6 +3,7 @@ python-docx
 langchain
 langchain-openai
 langchain-core
+langchain-community
 faiss-cpu
 openai
 streamlit
