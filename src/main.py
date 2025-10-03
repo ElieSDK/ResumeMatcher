@@ -162,7 +162,7 @@ def run_ui(index_dir: str):
         st.error("Streamlit is not installed.")
         return
 
-    st.title("📄 Job Matcher (RAG-Enabled)")
+    st.title("ResumeMatcher (RAG-Enabled)")
     r_file = st.file_uploader("Upload Resume", type=["pdf", "txt", "docx", "doc"])
     j_file = st.file_uploader("Upload Job Description", type=["pdf", "txt", "docx", "doc"])
 
