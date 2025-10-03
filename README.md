@@ -1,5 +1,23 @@
 # ResumeMatcher (RAG-Enabled)
 
+
+## **Project Overview**
+
+**Job Matcher (RAG-Enabled)** is an AI-powered tool for **matching resumes to job descriptions**. It uses a **Retrieval-Augmented Generation (RAG) pipeline**:
+
+1. Text from resumes and job descriptions is **extracted and cleaned** from PDF, DOCX, or TXT files.
+2. Text is **converted into embeddings** using OpenAI’s embedding model.
+3. Embeddings are stored in a **FAISS index** for fast similarity search.
+4. When comparing a resume to a job description:
+   - The system retrieves relevant context from the FAISS index.
+   - Sends the resume, job description, and retrieved context to an **LLM (GPT-3.5)**.
+   - Produces a **match score (0-100)** and **explanation bullets** for the match.
+5. Users can interact with the system via **CLI** or **Streamlit web interface**.
+
+**URL:** [https://resumematcher-rag.streamlit.app/](https://resumematcher-rag.streamlit.app/)  
+
+---
+
 **Repository structure**  
 
 ```
@@ -23,32 +41,15 @@
 
 ---
 
-## **Project Overview**
-
-**Job Matcher (RAG-Enabled)** is an AI-powered tool for **matching resumes to job descriptions**. It uses a **Retrieval-Augmented Generation (RAG) pipeline**:
-
-1. Text from resumes and job descriptions is **extracted and cleaned** from PDF, DOCX, or TXT files.
-2. Text is **converted into embeddings** using OpenAI’s embedding model.
-3. Embeddings are stored in a **FAISS index** for fast similarity search.
-4. When comparing a resume to a job description:
-   - The system retrieves relevant context from the FAISS index.
-   - Sends the resume, job description, and retrieved context to an **LLM (GPT-3.5)**.
-   - Produces a **match score (0-100)** and **explanation bullets** for the match.
-5. Users can interact with the system via **CLI** or **Streamlit web interface**.
-
-**URL:** [https://resumematcher-rag.streamlit.app/](https://resumematcher-rag.streamlit.app/)   
-
----
-
 ## **Pipeline Diagram**
 
-flowchart TD
-    A[Resume + Job Description] --> B[Text Extraction & Cleaning]
-    B --> C[Convert to Embeddings]
-    C --> D[FAISS Index / Retriever]
-    D --> E[Prompt Template + Context]
-    E --> F[LLM (GPT-3.5)]
-    F --> G[Output: Score + Explanation]
+
+ A[Resume + Job Description] --> B[Text Extraction & Cleaning]<br>
+ B --> C[Convert to Embeddings]<br>
+ C --> D[FAISS Index / Retriever]<br>
+ D --> E[Prompt Template + Context]<br>
+ E --> F[LLM (GPT-3.5)]<br>
+ F --> G[Output: Score + Explanation]
 
 ---
 
