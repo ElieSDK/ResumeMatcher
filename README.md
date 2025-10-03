@@ -71,8 +71,8 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/job-matcher.git
-cd job-matcher
+git clone https://github.com/yourusername/resumematcher.git
+cd resumematcher
 ```
 
 2. Create a virtual environment:
@@ -88,8 +88,6 @@ venv\Scripts\activate      # Windows
 ```bash
 pip install -r requirements.txt
 ```
-
-> **Requirements include:** `langchain`, `pdfplumber`, `python-docx`, `faiss`, `openai`, `streamlit`, `dotenv`
 
 4. Set up your OpenAI API key in a `.env` file:
 
