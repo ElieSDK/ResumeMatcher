@@ -36,6 +36,8 @@
    - Produces a **match score (0-100)** and **explanation bullets** for the match.
 5. Users can interact with the system via **CLI** or **Streamlit web interface**.
 
+**URL:** [https://resumematcher-rag.streamlit.app/](https://resumematcher-rag.streamlit.app/)   
+
 ---
 
 ## **Pipeline Diagram**
@@ -129,10 +131,9 @@ python src/main.py --action match --resume ./data/resumes/resume.pdf --jd ./data
 streamlit run src/main.py -- --action serve --index-dir ./index
 ```
 
+- **URL:** [https://resumematcher-rag.streamlit.app/](https://resumematcher-rag.streamlit.app/)  
 - Upload a resume and job description through the UI.  
 - Click **Get Match Score** to see the match score and explanations.  
-- **Fake URL for deployment:** [https://fake-url-for-streamlit-app.com](https://fake-url-for-streamlit-app.com)  
-- Replace the URL with your actual deployment link when ready.
 
 ---
 
@@ -173,5 +174,3 @@ This project is licensed under the MIT License – see the `LICENSE` file for de
 
 - Support for more file formats (ODT, RTF).  
 - Advanced scoring with weighted skills and experience.  
-- Deployment on cloud hosting (Heroku, AWS, Streamlit Sharing).  
-- Multi-language support for resumes and job descriptions.
