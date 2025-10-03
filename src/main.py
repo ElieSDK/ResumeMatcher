@@ -163,6 +163,7 @@ def run_ui(index_dir: str):
         return
 
     st.title("ResumeMatcher (RAG-Enabled)")
+    centered_html = f"<h1 style='text-align: center;'>{title_string}</h1>"
     r_file = st.file_uploader("Upload Resume", type=["pdf", "txt", "docx", "doc"])
     j_file = st.file_uploader("Upload Job Description", type=["pdf", "txt", "docx", "doc"])
 
