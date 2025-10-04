@@ -44,12 +44,12 @@
 ## **Pipeline Diagram**
 
 
- A[Resume + Job Description] --> B[Text Extraction & Cleaning]<br>
- B --> C[Convert to Embeddings]<br>
- C --> D[FAISS Index / Retriever]<br>
- D --> E[Prompt Template + Context]<br>
- E --> F[LLM (GPT-3.5)]<br>
- F --> G[Output: Score + Explanation]
+ A [Resume + Job Description] --> B [Text Extraction & Cleaning]<br>
+ B --> C [Convert to Embeddings]<br>
+ C --> D [FAISS Index / Retriever]<br>
+ D --> E [Prompt Template + Context]<br>
+ E --> F [LLM (GPT-3.5)]<br>
+ F --> G [Output: Score + Explanation]
 
 ---
 
@@ -148,22 +148,6 @@ streamlit run src/main.py -- --action serve --index-dir ./index
   ]
 }
 ```
-
----
-
-## **Folder Explanation**
-
-- `data/` → contains input resumes and job descriptions.  
-- `index/` → contains the FAISS index (`.faiss`, `.pkl`, `index_store`).  
-- `output/` → stores example output from the CLI.  
-- `src/` → contains the main script (`main.py`).  
-- `LICENSE` → project license.  
-
----
-
-## **License**
-
-This project is licensed under the MIT License – see the `LICENSE` file for details.
 
 ---
 
