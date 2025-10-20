@@ -10,13 +10,13 @@ import logging
 import pdfplumber
 import docx
 
-# LangChain / OpenAI
+# LangChain / OpenAI (updated for LangChain 0.2+)
 from langchain_core.documents import Document
-from langchain_community.vectorstores import FAISS
-from langchain.prompts import ChatPromptTemplate
-from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-from langchain.output_parsers.json import SimpleJsonOutputParser
+from langchain_core.output_parsers import SimpleJsonOutputParser
+from langchain_community.vectorstores import FAISS
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
 
 # Utility
 from dotenv import load_dotenv
