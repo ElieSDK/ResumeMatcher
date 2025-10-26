@@ -130,7 +130,7 @@ def get_retriever(index_dir: str, k: int = 5):
     vs = FAISS.load_local(index_dir, embeds, allow_dangerous_deserialization=True, index_name="index_store")
     return vs.as_retriever(search_kwargs={"k": k})
 
-# Matching (RAG -> LLM)
+# Matching
 def match(resume_path: str, jd_path: str, index_dir: str, k: int = 5) -> dict:
     resume_text = extract_and_cache(resume_path)
     jd_text = extract_and_cache(jd_path)
