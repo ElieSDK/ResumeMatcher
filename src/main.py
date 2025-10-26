@@ -163,7 +163,7 @@ def run_ui(index_dir: str):
     if not STREAMLIT:
         print("Streamlit not installed.")
         return
-    st.title("ResumeMatcher (cached extraction)")
+    st.title("ResumeMatcher")
     r_file = st.file_uploader("Upload Resume", type=["pdf", "txt", "docx", "doc"])
     j_file = st.file_uploader("Upload Job Description", type=["pdf", "txt", "docx", "doc"])
     if r_file and j_file:
