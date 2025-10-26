@@ -27,10 +27,10 @@ You are an expert recruiter. Your task is to compare a candidate's resume agains
 The goal is to determine the suitability and quantify the match.
 
 Return your complete response as a single JSON object that conforms to this schema:
-{
+{{
     "score": <int, 0-100, where 100 is a perfect match>,
     "explanation": <list of strings, key bullet points justifying the score, highlighting matches and gaps>
-}
+}}
 
 ---
 Resume:
