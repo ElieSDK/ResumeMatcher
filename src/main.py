@@ -195,6 +195,14 @@ def run_ui(index_dir: str):
                 pass
 
 # CLI
+'''
+Arguments:
+    --action → what the script should do (index, match, or serve)
+    --data-dir → location of resumes and job descriptions (default ./data)
+    --index-dir → where to save or load the FAISS index (default ./index)
+    --resume → path to a resume file
+    --jd → path to a job description file
+'''
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--action", choices=["index", "match", "serve"], default="serve")
