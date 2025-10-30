@@ -30,13 +30,13 @@ You must identify **both**:
 - Gaps or mismatches (missing skills, insufficient experience, irrelevant background)
 
 Return your complete response as a single JSON object with this exact schema:
-{
+{{
     "score": <int, 0-100, where 100 is a perfect match>,
-    "explanation": {
+    "explanation": {{
         "strengths": [<list of short bullet points summarizing matches>],
         "gaps": [<list of short bullet points summarizing mismatches or missing elements>]
-    }
-}
+    }}
+}}
 
 ---
 Resume:
