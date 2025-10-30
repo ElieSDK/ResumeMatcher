@@ -23,19 +23,16 @@ except ImportError:
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 MATCHING_PROMPT_TEMPLATE = """
-You are an expert recruiter. Your task is to evaluate how well a candidate's resume matches a given job description.
-
-You must identify **both**:
+You are an expert recruiter. Your task is to compare a candidate's resume against a job description.
+The goal is to determine the suitability and quantify the match.
+You must identify both:
 - Areas of strong alignment (skills, experience, achievements that match the job)
 - Gaps or mismatches (missing skills, insufficient experience, irrelevant background)
 
-Return your complete response as a single JSON object with this exact schema:
+Return your complete response as a single JSON object that conforms to this schema:
 {{
     "score": <int, 0-100, where 100 is a perfect match>,
-    "explanation": {{
-        "strengths": [<list of short bullet points summarizing matches>],
-        "gaps": [<list of short bullet points summarizing mismatches or missing elements>]
-    }}
+    "explanation": <list of strings, key bullet points justifying the score, highlighting matches and gaps>
 }}
 
 ---
