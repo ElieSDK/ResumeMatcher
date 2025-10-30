@@ -32,10 +32,7 @@ You must identify both:
 Return your complete response as a single JSON object that conforms to this schema:
 {{
     "score": <int, 0-100, where 100 is a perfect match>,
-    "explanation": {{
-        "strengths": [<list of strings highlighting strong matches>],
-        "gaps": [<list of strings highlighting missing or weak areas>]
-    }}
+    "explanation": <list of strings, key bullet points justifying the score, highlighting matches and gaps>
 }}
 
 ---
