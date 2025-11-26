@@ -1,5 +1,10 @@
-# ResumeMatcher (RAG-Enabled)
+<div align="center">
 
+<h1>ResumeMatcher (RAG-Enabled)</h1>
+
+<img src="images/readme_image.jpg" alt="My Project Logo" width="500"/>
+
+</div>
 
 ## **Project Overview**
 
